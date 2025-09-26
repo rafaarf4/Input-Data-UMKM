@@ -3,8 +3,9 @@ $koneksi = new mysqli("localhost", "root", "", "umkm_db");
 if ($koneksi->connect_error) {
     die("Koneksi gagal: " . $koneksi->connect_error);
 }
-$result = $koneksi->query("SELECT * FROM umkm_kuliner ORDER BY created_at DESC");
+$result = $koneksi->query("SELECT * FROM umkm_kuliner ORDER BY id ASC");
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
